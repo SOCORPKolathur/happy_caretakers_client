@@ -88,6 +88,8 @@ class _LanguagesViewState extends State<LanguagesView> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
           child: Stack(
@@ -151,7 +153,7 @@ class _LanguagesViewState extends State<LanguagesView> {
                                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (ctx)=> MainView()));
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
+                                  padding:  EdgeInsets.symmetric(horizontal: width/25.7142, vertical: height/47.25),
                                   child: Container(
                                     height: size.height/10.825,
                                     width: size.height/10.825,

@@ -58,6 +58,8 @@ class _OtpVerificationViewState extends State<OtpVerificationView> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Stack(
         children: [
@@ -79,7 +81,7 @@ class _OtpVerificationViewState extends State<OtpVerificationView> {
             height: size.height,
             width: size.width,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 0.0),
+              padding:  EdgeInsets.symmetric(horizontal: width/36.0, vertical: 0.0),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -186,7 +188,7 @@ class _OtpVerificationViewState extends State<OtpVerificationView> {
                                 vertical: size.height / 37.8,
                                 horizontal: size.width / 18),
                             child: Container(
-                              height: 60,
+                              height: height/12.6,
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Constants.primaryAppColor,
@@ -196,7 +198,7 @@ class _OtpVerificationViewState extends State<OtpVerificationView> {
                                 child: Text(
                                   "Verify OTP",
                                   style: GoogleFonts.openSans(
-                                      fontSize: 17,
+                                      fontSize: width/21.176,
                                       color: const Color(0xffFFFFFF),
                                       fontWeight: FontWeight.bold),
                                 ),
@@ -214,7 +216,7 @@ class _OtpVerificationViewState extends State<OtpVerificationView> {
                         text: TextSpan(
                           text: "",
                           style: GoogleFonts.openSans(
-                              fontSize: 14, color: const Color(0xff757879)),
+                              fontSize: width/25.714, color: const Color(0xff757879)),
                           children: <TextSpan>[
                             TextSpan(
                               text: 'Edit Phone Number',
@@ -257,12 +259,12 @@ class _OtpVerificationViewState extends State<OtpVerificationView> {
                         child: CircularProgressIndicator(
                           color: Constants.primaryAppColor,
                           value: null,
-                          strokeWidth: 7.0,
+                          strokeWidth: width/51.428,
                         ),
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 25.0),
+                      margin:  EdgeInsets.only(top: height/30.24),
                       child: Center(
                         child: Text(
                           "loading..Please wait...",
@@ -286,7 +288,7 @@ class _OtpVerificationViewState extends State<OtpVerificationView> {
     backgroundColor: Colors.transparent,
     elevation: 0,
     content: Container(
-        padding: const EdgeInsets.all(8),
+        padding:  EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(color: Constants.primaryAppColor, width: 3),

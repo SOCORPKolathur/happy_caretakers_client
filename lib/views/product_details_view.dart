@@ -46,6 +46,8 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: Constants.appBackgroundolor,
         appBar: AppBar(
@@ -86,7 +88,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 15),
+                      padding:  EdgeInsets.symmetric(horizontal: width/30,vertical: height/50.4),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -94,14 +96,14 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               SizedBox(
-                                width: 250,
+                                width: width/1.44,
                                 child: Text(
                                   currentProduct.productname!,
                                   maxLines: 4,
                                   style: GoogleFonts.urbanist(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 18,
+                                    fontSize: width/20,
                                   ),
                                 ),
                               ),
@@ -110,7 +112,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                                 style: GoogleFonts.urbanist(
                                   color: Colors.black,
                                   fontWeight: FontWeight.w700,
-                                  fontSize: 16,
+                                  fontSize: width/22.5,
                                 ),
                               ),
                             ],
@@ -121,7 +123,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                             style: GoogleFonts.urbanist(
                               color: Constants.primaryAppColor,
                               fontWeight: FontWeight.w700,
-                              fontSize: 15
+                              fontSize: width/24
                             ),
                           ),
                           SizedBox(height: size.height/75.9),
@@ -130,7 +132,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                             style: GoogleFonts.urbanist(
                               color: Colors.grey,
                               fontWeight: FontWeight.w700,
-                              fontSize: 14
+                              fontSize: width/25.714
                             ),
                           ),
                           SizedBox(height: size.height/75.9),
@@ -139,7 +141,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                             style: GoogleFonts.urbanist(
                               color: Constants.primaryAppColor,
                               fontWeight: FontWeight.w700,
-                              fontSize: 16
+                              fontSize: width/25.714
                             ),
                           ),
                           SizedBox(height: size.height/75.9),
@@ -151,7 +153,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                               itemCount: categories.length,
                               itemBuilder: (ctx,i){
                                 return Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                                  padding:  EdgeInsets.symmetric(horizontal: width/36.0),
                                   child: Container(
                                     height: size.height/18.975,
                                     decoration: BoxDecoration(
@@ -160,13 +162,13 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                                     ),
                                     child: Center(
                                       child: Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 0),
+                                        padding:  EdgeInsets.symmetric(horizontal: width/18,vertical: 0),
                                         child: Text(
                                           categories[i],
                                           style: GoogleFonts.urbanist(
                                             color: Colors.white,
                                             fontWeight: FontWeight.w700,
-                                            fontSize: 16
+                                            fontSize: width/25.714
                                           ),
                                         ),
                                       ),
@@ -183,7 +185,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                             style: GoogleFonts.urbanist(
                               color: Constants.primaryAppColor,
                               fontWeight: FontWeight.w700,
-                              fontSize: 16
+                              fontSize: width/25.714
                             ),
                           ),
                           SizedBox(height: size.height/75.9),
@@ -204,7 +206,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                                           Navigator.push(context, MaterialPageRoute(builder: (ctx)=> ProductDetailsView(productId: products[i].id!,productName: products[i].productname!,userDocId: widget.userDocId)));
                                         },
                                         child: Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                                          padding:  EdgeInsets.symmetric(horizontal: width/36.0),
                                           child: Container(
                                             width: size.width/2.305882352941176,
                                             decoration: BoxDecoration(
@@ -218,7 +220,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                                                 )
                                               ],
                                             ),
-                                            padding: const EdgeInsets.symmetric(horizontal: 8,vertical: 8),
+                                            padding:  EdgeInsets.symmetric(horizontal:width/45,vertical: height/94.5),
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               mainAxisAlignment: MainAxisAlignment.start,
@@ -251,7 +253,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                                                         style: GoogleFonts.urbanist(
                                                           color: Colors.grey,
                                                           fontWeight: FontWeight.w700,
-                                                          fontSize: 14,
+                                                          fontSize: width/25.714,
                                                         ),
                                                       ),
                                                     ),
@@ -261,7 +263,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                                                       style: GoogleFonts.urbanist(
                                                         color: Colors.black,
                                                         fontWeight: FontWeight.w700,
-                                                        fontSize: 12,
+                                                        fontSize: width/30,
                                                       ),
                                                     ),
                                                   ],

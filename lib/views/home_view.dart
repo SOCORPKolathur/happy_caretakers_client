@@ -117,7 +117,7 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
             ),
             SizedBox(height: height/75.6),
             Container(
-              height: 50,
+              height: height/15.12,
               width: width,
               decoration: BoxDecoration(
                 color: Constants.primaryWhite,
@@ -134,7 +134,7 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
                 unselectedLabelColor: Constants.lightGrey,
                 labelColor: Constants.primaryAppColor,
                 labelStyle: GoogleFonts.poppins(
-                  fontSize: 12,
+                  fontSize: width/30,
                   fontWeight: FontWeight.w600,
                 ),
                 tabs: [

@@ -21,6 +21,8 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double height=MediaQuery.of(context).size.height;
+    double width=MediaQuery.of(context).size.width;
     return Stack(
       children: [
         CustomPaint(
@@ -45,10 +47,10 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
                         topLeft: Radius.circular(20),
                       ),
                     ),
-                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    padding:  EdgeInsets.symmetric(vertical: height/151.2),
                     child: Row(
                       children: [
-                        SizedBox(width: 10),
+                        SizedBox(width: width/36.0),
                         CircleAvatar(
                           radius: 30,
                           backgroundColor: Constants.lightGrey,
@@ -60,7 +62,7 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
                             KText(
                               text: "${widget.careTaker.firstName} ${widget.careTaker.lastName}",
                               style: GoogleFonts.poppins(
-                                fontSize: 17,
+                                fontSize: width/21.176,
                                 fontWeight: FontWeight.w600,
                                 color: Constants.darkGrey,
                               ),
@@ -68,7 +70,7 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
                             KText(
                               text: widget.careTaker.position,
                               style: GoogleFonts.poppins(
-                                fontSize: 13,
+                                fontSize: width/27.692,
                                 fontWeight: FontWeight.normal,
                                 color: Constants.darkGrey,
                               ),
@@ -87,7 +89,7 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
                         topRight: Radius.circular(20),
                       ),
                     ),
-                    padding: const EdgeInsets.only(left: 30,right: 120),
+                    padding:  EdgeInsets.only(left: width/12,right: width/3),
                     child: Center(
                         child: Divider(
                           color: Constants.darkGrey,
@@ -124,7 +126,10 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
                                     topRight: Radius.circular(10),
                                   )
                               ),
-                              padding: const EdgeInsets.all(10),
+                              padding:  EdgeInsets.symmetric(
+                                horizontal: width/36.0,
+                                vertical: height/75.6
+                              ),
                               child: ReadMoreText(
                                 widget.careTaker.about,
                                 style: GoogleFonts.poppins(
@@ -139,7 +144,7 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
                                 moreStyle: GoogleFonts.poppins(
                                     decoration: TextDecoration.underline,
                                     color: Constants.primaryAppColor,
-                                    fontSize: 14,
+                                    fontSize: width/25.7142,
                                     fontWeight: FontWeight.bold
                                 ),
                               ),
@@ -165,7 +170,10 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding:  EdgeInsets.symmetric(
+                                    vertical: height/94.5,
+                                    horizontal: width/45
+                                  ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
@@ -188,7 +196,10 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding:  EdgeInsets.symmetric(
+                                      vertical: height/94.5,
+                                      horizontal: width/45
+                                  ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
@@ -211,7 +222,10 @@ class _CustomProfileCardState extends State<CustomProfileCard> {
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding:  EdgeInsets.symmetric(
+                                      vertical: height/94.5,
+                                      horizontal: width/45
+                                  ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [

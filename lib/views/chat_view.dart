@@ -13,6 +13,8 @@ class _ChatViewState extends State<ChatView> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Constants.appBackgroundolor,
       body: SafeArea(
@@ -260,7 +262,7 @@ class _ChatViewState extends State<ChatView> {
                 child: SizedBox(
                   height: size.height/12.6,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      padding:  EdgeInsets.symmetric(horizontal: width/24),
                       child: Icon(
                           Icons.send,
                           color: Constants.primaryAppColor,

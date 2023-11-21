@@ -16,6 +16,9 @@ class AppBarSearchWidget extends StatefulWidget {
 class _AppBarSearchWidgetState extends State<AppBarSearchWidget> {
   @override
   Widget build(BuildContext context) {
+    double height=MediaQuery.of(context).size.height;
+    double width=MediaQuery.of(context).size.width;
+
     return Container(
       height: 40,
       decoration: BoxDecoration(
@@ -32,7 +35,7 @@ class _AppBarSearchWidgetState extends State<AppBarSearchWidget> {
           },
           controller: widget.controller,
           decoration: InputDecoration(
-            contentPadding: const EdgeInsets.symmetric(vertical: 6,horizontal: 5),
+            contentPadding:  EdgeInsets.symmetric(vertical:height/126 ,horizontal: width/72),
             border: InputBorder.none,
             suffixIcon: IconButton(
               icon: Icon(
@@ -46,11 +49,11 @@ class _AppBarSearchWidgetState extends State<AppBarSearchWidget> {
             hintText: 'Search any type professionals',
             hintStyle: GoogleFonts.poppins(
               color: Constants.lightGrey,
-              fontSize: 14,
+              fontSize: width/25.7142,
             ),
             labelStyle: GoogleFonts.poppins(
               color: Constants.lightGrey,
-              fontSize: 14,
+              fontSize: width/25.7142,
             ),
           ),
         ),

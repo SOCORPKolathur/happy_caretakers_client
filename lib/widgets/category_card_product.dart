@@ -15,17 +15,25 @@ class CategoryCardProduct extends StatefulWidget {
 }
 
 class _CategoryCardProductState extends State<CategoryCardProduct> {
+
+
+
   @override
   Widget build(BuildContext context) {
+    double height=MediaQuery.of(context).size.height;
+    double width=MediaQuery.of(context).size.width;
     return Container(
-      height: 100,
+      height: height/7.56,
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding:  EdgeInsets.symmetric(
+              vertical: height/94.5,
+              horizontal: width/45
+            ),
             child: Container(
-              height: 50,
-              width: 60,
+              height: height/15.12,
+              width: width/6,
               decoration: BoxDecoration(
                 color: Constants.primaryAppColor,
                 borderRadius: BorderRadius.circular(10),
@@ -44,7 +52,7 @@ class _CategoryCardProductState extends State<CategoryCardProduct> {
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontWeight: FontWeight.normal,
-              fontSize: 14,
+              fontSize: width/25.7142,
             ),
           ),
         ],

@@ -100,7 +100,7 @@ class _ProductsViewState extends State<ProductsView> with SingleTickerProviderSt
                   ),
                   SizedBox(height: height/75.6),
                   Container(
-                    height: 50,
+                    height: height/15.12,
                     width: size.width,
                     decoration: BoxDecoration(
                       color: Constants.primaryWhite,
@@ -116,11 +116,11 @@ class _ProductsViewState extends State<ProductsView> with SingleTickerProviderSt
                       onTap: (index){},
                       unselectedLabelColor: Constants.lightGrey,
                       labelColor: Constants.primaryAppColor,
-                      labelPadding: EdgeInsets.symmetric(horizontal: 1),
+                      labelPadding: EdgeInsets.symmetric(horizontal: width/360),
                       tabs: [
                         Tab(
                           child: SizedBox(
-                            width: 90,
+                            width: width/4,
                             child: Center(
                               child: Text(
                                 "All"
@@ -130,7 +130,7 @@ class _ProductsViewState extends State<ProductsView> with SingleTickerProviderSt
                         ),
                         Tab(
                           child: SizedBox(
-                            width: 90,
+                            width: width/4,
                             child: Center(
                               child: Text(
                                   "Baby"
@@ -140,7 +140,7 @@ class _ProductsViewState extends State<ProductsView> with SingleTickerProviderSt
                         ),
                         Tab(
                           child: SizedBox(
-                            width: 90,
+                            width: width/4,
                             child: Center(
                               child: Text(
                                   "Senior Citizen"
@@ -149,9 +149,8 @@ class _ProductsViewState extends State<ProductsView> with SingleTickerProviderSt
                           ),
                         ),
                         Tab(
-                          child: Container(
-
-                            width: 90,
+                          child: SizedBox(
+                            width: width/4,
                             child: Center(
                               child: Text(
                                   "Other"

@@ -46,8 +46,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double height=MediaQuery.of(context).size.height;
+    double width=MediaQuery.of(context).size.width;
     return Container(
-      padding: const EdgeInsets.only(right: 15),
+      padding:  EdgeInsets.only(right: width/24),
       height: size.height * 0.07,
       width: size.width * 0.9,
       decoration: BoxDecoration(
@@ -92,11 +94,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
             hintText: widget.hint,
             hintStyle: GoogleFonts.poppins(
               color: Constants.lightGrey,
-              fontSize: 18,
+              fontSize: width/20,
             ),
             labelStyle: GoogleFonts.poppins(
               color: Constants.lightGrey,
-              fontSize: 18,
+              fontSize: width/20,
             ),
           ),
         ),

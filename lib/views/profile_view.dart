@@ -48,18 +48,18 @@ class _ProfileViewState extends State<ProfileView> {
                         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToih1Zk-973AZLNE6aDwDo2IX49B0Ix_j4pw&usqp=CAU",
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: height/75.6),
                   KText(
                     text: 'Veronica John',
                     style: GoogleFonts.poppins(
-                        fontSize: 22,
+                        fontSize: width/16.3636,
                         color: Constants.primaryWhite,
                         fontWeight: FontWeight.w600),
                   ),
                   Text(
                     '+91 7639033006',
                     style: GoogleFonts.poppins(
-                        fontSize: 17,
+                        fontSize: width/21.1764,
                         color: Constants.primaryWhite,
                         fontWeight: FontWeight.w600),
                   ),
@@ -112,7 +112,7 @@ class _ProfileViewState extends State<ProfileView> {
       elevation: 2,
       borderRadius: BorderRadius.circular(10),
       child: Container(
-        height: 80,
+        height: height/9.45,
         width: width*0.9,
         decoration: BoxDecoration(
           color: Constants.primaryWhite,
@@ -122,12 +122,12 @@ class _ProfileViewState extends State<ProfileView> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SizedBox(
-              width: 250,
+              width: width/1.44,
               child: KText(
                 text: title,
                 style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.w500,
-                  fontSize: 19
+                  fontSize: width/18.947
                 ),
               ),
             ),

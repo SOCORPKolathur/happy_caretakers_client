@@ -45,7 +45,7 @@ class _LoginViewState extends State<LoginView> {
             height: size.height,
             width: size.width,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 0.0),
+              padding:  EdgeInsets.symmetric(horizontal: width/36.0, vertical: 0.0),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -183,6 +183,8 @@ class _LoginViewState extends State<LoginView> {
 
   showNewRegisterPopUp(context) async {
     Size size = MediaQuery.of(context).size;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     await showDialog(
       context: context,
       builder: (ctx) {
@@ -226,7 +228,7 @@ class _LoginViewState extends State<LoginView> {
                     //         builder: (ctx) => const RegisterView()));
                   },
                   child: Container(
-                    height: 40,
+                    height: height/18.9,
                     width: size.width * 0.7,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -263,7 +265,7 @@ class _LoginViewState extends State<LoginView> {
     backgroundColor: Colors.transparent,
     elevation: 0,
     content: Container(
-        padding: const EdgeInsets.all(8),
+        padding:  EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(color: Constants.primaryAppColor, width: 3),

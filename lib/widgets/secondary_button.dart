@@ -16,6 +16,8 @@ class _SecondaryButtonState extends State<SecondaryButton> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double height=MediaQuery.of(context).size.height;
+    double width=MediaQuery.of(context).size.width;
     return InkWell(
       onTap: (){
         widget.onTap();
@@ -32,7 +34,7 @@ class _SecondaryButtonState extends State<SecondaryButton> {
             widget.title,
             style: GoogleFonts.poppins(
               color: Constants.darkGrey,
-              fontSize: 18,
+              fontSize: width/20,
               fontWeight: FontWeight.w500,
             ),
           ),
