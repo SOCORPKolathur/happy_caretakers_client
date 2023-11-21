@@ -5,7 +5,6 @@ import 'package:happy_caretakers_client/models/product_model.dart';
 import 'package:happy_caretakers_client/views/product_details_view.dart';
 import 'package:happy_caretakers_client/widgets/product_card.dart';
 import 'package:lottie/lottie.dart';
-
 import '../Widgets/kText.dart';
 import '../constants.dart';
 import '../widgets/appbar_search.dart';
